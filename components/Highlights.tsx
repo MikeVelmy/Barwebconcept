@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "./Reveal";
+import { SmokeWisp } from "./decor/SmokeWisp";
 import { highlights } from "@/lib/content";
 
 export function Highlights() {
@@ -34,6 +35,11 @@ export function Highlights() {
                   sizes="(min-width: 768px) 45vw, 100vw"
                   className="object-cover transition-transform duration-700 hover:scale-105"
                 />
+                {i === 0 && (
+                  <div className="absolute bottom-3 right-6 z-10">
+                    <SmokeWisp />
+                  </div>
+                )}
               </div>
             </Reveal>
             <Reveal className="w-full md:w-1/2" delay={0.15}>

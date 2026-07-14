@@ -16,6 +16,14 @@
   --font-body: var(--font-body);
 
   --animate-marquee: marquee 32s linear infinite;
+  --animate-smoke-a: smoke-drift 7s ease-in-out infinite;
+  --animate-smoke-b: smoke-drift 7s ease-in-out infinite 2.3s;
+  --animate-smoke-c: smoke-drift 7s ease-in-out infinite 4.6s;
+  --animate-mug-pour: mug-pour 3.6s ease-in-out infinite;
+  --animate-mug-bubble: mug-bubble 3.6s ease-in-out infinite;
+  --animate-sparkle: sparkle-pop 0.8s ease-out infinite;
+  --animate-mascot-bob: mascot-bob 3.2s ease-in-out infinite;
+  --animate-mascot-wave: mascot-wave 1.8s ease-in-out infinite;
 }
 
 @keyframes marquee {
@@ -24,6 +32,94 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes smoke-drift {
+  0% {
+    transform: translate(0, 0) scale(0.85) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate(-6px, -34px) scale(1.15) rotate(-8deg);
+    opacity: 0;
+  }
+}
+
+@keyframes mug-pour {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(-16deg);
+  }
+  60% {
+    transform: rotate(-16deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes mug-bubble {
+  0%,
+  40% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  55% {
+    opacity: 0.9;
+  }
+  90% {
+    transform: translateY(-9px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle-pop {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+@keyframes mascot-bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+}
+
+@keyframes mascot-wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-18deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  75% {
+    transform: rotate(-10deg);
   }
 }
 

@@ -1,5 +1,6 @@
 import { Reveal } from "./Reveal";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import { BeerMug } from "./decor/BeerMug";
 import { menuCategories, site } from "@/lib/content";
 
 export function MenuPreview() {
@@ -21,8 +22,9 @@ export function MenuPreview() {
         <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-12 sm:mt-14 md:grid-cols-2">
           {menuCategories.map((category, i) => (
             <Reveal key={category.name} delay={(i % 2) * 0.08}>
-              <h3 className="font-display border-b border-surface-line pb-3 text-lg font-semibold uppercase tracking-wide text-gold-soft">
+              <h3 className="font-display flex items-center gap-2 border-b border-surface-line pb-3 text-lg font-semibold uppercase tracking-wide text-gold-soft">
                 {category.name}
+                {category.name === "Cold Beers" && <BeerMug className="size-6" />}
               </h3>
               <ul className="mt-4 flex flex-col gap-4">
                 {category.items.map((item) => (

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { navLinks, site } from "@/lib/content";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { InstagramIcon } from "./InstagramIcon";
+import { Mascot } from "./decor/Mascot";
 
 export function Footer() {
   return (
@@ -48,6 +49,7 @@ export function Footer() {
           >
             <InstagramIcon className="size-[19px]" />
           </a>
+          <Mascot className="size-11 ml-1" />
         </div>
       </div>
 
