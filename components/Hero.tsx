@@ -1,22 +1,47 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { CTAButton } from "./CTAButton";
 import { Reveal } from "./Reveal";
-import { heroImage, site } from "@/lib/content";
+import { heroSlides } from "@/lib/content";
+
+const SLIDE_INTERVAL_MS = 4000;
 
 export function Hero() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActiveIndex((i) => (i + 1) % heroSlides.length);
+    }, SLIDE_INTERVAL_MS);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section id="top" className="relative flex min-h-[100svh] w-full items-end overflow-hidden bg-ink">
-      <Image
-        src={heroImage.src}
-        alt={heroImage.alt}
-        fill
-        priority
-        sizes="100vw"
-        placeholder={heroImage.blurDataURL ? "blur" : "empty"}
-        blurDataURL={heroImage.blurDataURL}
-        className="object-cover object-[center_25%]"
-      />
+      {heroSlides.map((slide, i) => (
+        <motion.div
+          key={slide.image.src}
+          className="absolute inset-0"
+          initial={false}
+          animate={{ opacity: i === activeIndex ? 1 : 0 }}
+          transition={{ duration: 1.1, ease: "easeInOut" }}
+        >
+          <Image
+            src={slide.image.src}
+            alt={slide.image.alt}
+            fill
+            priority={i === 0}
+            sizes="100vw"
+            placeholder={slide.image.blurDataURL ? "blur" : "empty"}
+            blurDataURL={slide.image.blurDataURL}
+            className={`object-cover ${slide.focus}`}
+          />
+        </motion.div>
+      ))}
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/10" />
       <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-transparent to-transparent" />
 

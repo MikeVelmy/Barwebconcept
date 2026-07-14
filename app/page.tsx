@@ -15,11 +15,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Gallery />
         <Marquee />
         <Highlights />
         <MenuPreview />
         <EventsPreview />
-        <Gallery />
         <LocationHours />
         <ReservationForm />
       </main>

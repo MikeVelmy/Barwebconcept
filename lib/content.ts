@@ -33,7 +33,16 @@ export const navLinks = [
   { href: "#reserve", label: "Reserve" },
 ];
 
-export const heroImage = img("hero.jpg", "Crowd dancing under warm stage lights at Walako Pub");
+export const heroSlides = [
+  {
+    image: img("hero.jpg", "Crowd dancing under warm stage lights at Walako Pub"),
+    focus: "object-[center_25%]",
+  },
+  {
+    image: img("event-trappers-invasion.jpg", "Trappers Invasion event flyer for Walako Pub, July 18"),
+    focus: "object-top",
+  },
+];
 
 export const highlights = [
   {
@@ -86,12 +95,20 @@ export const menuCategories = [
   },
 ];
 
-export const featuredEvent = {
-  title: "Pre Homowo Bash",
-  dateRange: "July 26 – 28",
-  detail: "DJ Capo & DJ Guest · MC Stagga Bills · Doors 9PM",
-  image: img("event-homowo-bash.jpg", "Pre Homowo Bash event flyer for Walako Pub, July 26 to 28"),
-};
+export const upcomingEvents = [
+  {
+    title: "Trappers Invasion",
+    dateRange: "July 18",
+    detail: "Akwesi Amewuga & SOVT Music · Hypemen Stagga Bills, Mera GH, Jay Time · Doors 10PM",
+    image: img("event-trappers-invasion.jpg", "Trappers Invasion event flyer for Walako Pub, July 18"),
+  },
+  {
+    title: "Pre Homowo Bash",
+    dateRange: "July 26 – 28",
+    detail: "DJ Capo & DJ Guest · MC Stagga Bills · Doors 9PM",
+    image: img("event-homowo-bash.jpg", "Pre Homowo Bash event flyer for Walako Pub, July 26 to 28"),
+  },
+];
 
 export const recurringEvents = [
   { day: "Every Friday", name: "Live DJ Night", detail: "Resident DJs, open floor, no cover before 10PM." },

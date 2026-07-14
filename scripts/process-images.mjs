@@ -14,6 +14,7 @@ const jobs = [
   { src: "club5.jpeg", out: "gallery-cheers-shots.jpg", maxW: 1000 },
   { src: "club6.jpeg", out: "gallery-hookah-drinks.jpg", maxW: 1000 },
   { src: "event 1.jpeg", out: "event-homowo-bash.jpg", maxW: 900 },
+  { src: "Latest upcoming event.jpeg", out: "event-trappers-invasion.jpg", maxW: 1400 },
   { src: "kebab.jpeg", out: "menu-suya-skewers.jpg", maxW: 1200 },
   { src: "turnt.jpeg", out: "gallery-shot-celebration.jpg", maxW: 1000 },
   { src: "walako.jpeg", out: "gallery-matchday-jersey.jpg", maxW: 900 },
