@@ -41,7 +41,7 @@
     opacity: 0;
   }
   15% {
-    opacity: 0.55;
+    opacity: 0.85;
   }
   100% {
     transform: translate(-6px, -34px) scale(1.15) rotate(-8deg);

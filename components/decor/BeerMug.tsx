@@ -27,14 +27,17 @@ export function BeerMug({ className = "size-6" }: { className?: string }) {
           strokeLinejoin="round"
         />
       </svg>
-      <span className="absolute -top-1 left-2 h-1 w-1 rounded-full bg-bone/80 animate-mug-bubble" />
+      <span
+        className="absolute -top-1 left-2 h-1 w-1 rounded-full bg-bone/80 animate-mug-bubble"
+        style={{ opacity: 0, animationFillMode: "both" }}
+      />
       <span
         className="absolute -top-1.5 left-4 h-[3px] w-[3px] rounded-full bg-bone/70 animate-mug-bubble"
-        style={{ animationDelay: "0.5s" }}
+        style={{ animationDelay: "0.5s", opacity: 0, animationFillMode: "both" }}
       />
       <span
         className="absolute -top-1 left-5 h-1 w-1 rounded-full bg-bone/80 animate-mug-bubble"
-        style={{ animationDelay: "1s" }}
+        style={{ animationDelay: "1s", opacity: 0, animationFillMode: "both" }}
       />
     </span>
   );
