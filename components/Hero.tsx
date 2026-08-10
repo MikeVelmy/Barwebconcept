@@ -45,8 +45,8 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/10" />
       <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-transparent to-transparent" />
 
-      <div className="relative z-10 w-full px-5 pb-16 pt-32 sm:px-8 sm:pb-20 md:px-14 md:pb-24 lg:px-20">
-        <div className="mx-auto flex max-w-7xl flex-col items-start gap-6">
+      <div className="relative z-10 w-full pl-5 pb-16 pt-32 pr-5 sm:pl-8 sm:pr-8 sm:pb-20 md:pl-14 md:pr-14 md:pb-24 lg:pl-[4cm] lg:pr-20">
+        <div className="mr-auto flex max-w-7xl flex-col items-start gap-6">
           <Reveal mode="mount">
             <h1 className="font-display max-w-3xl text-[2.6rem] leading-[1.04] font-bold tracking-tight text-bone sm:text-6xl md:text-7xl">
               Accra&rsquo;s home for <span className="text-gold">late nights</span>.
