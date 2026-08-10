@@ -39,8 +39,8 @@ export const heroSlides = [
     focus: "object-[center_25%]",
   },
   {
-    image: img("event-trappers-invasion.jpg", "Trappers Invasion event flyer for Walako Pub, July 18"),
-    focus: "object-top",
+    image: img("hero-2.jpg", "Walako Pub nightlife scene"),
+    focus: "object-center",
   },
 ];
 

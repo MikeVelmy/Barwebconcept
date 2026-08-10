@@ -7,6 +7,7 @@ const OUT = path.resolve("public/images");
 
 const jobs = [
   { src: "home page hero section.jpeg", out: "hero.jpg", maxW: 1400 },
+  { src: "new additional header.jpeg", out: "hero-2.jpg", maxW: 1400 },
   { src: "club.jpeg", out: "gallery-shisha-lounge.jpg", maxW: 1000 },
   { src: "club2.jpeg", out: "gallery-live-crowd.jpg", maxW: 1000 },
   { src: "club3.jpeg", out: "gallery-bottle-service.jpg", maxW: 1000 },

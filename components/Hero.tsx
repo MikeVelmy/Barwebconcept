@@ -48,13 +48,6 @@ export function Hero() {
       <div className="relative z-10 w-full px-5 pb-16 pt-32 sm:px-8 sm:pb-20 md:px-14 md:pb-24 lg:px-20">
         <div className="mx-auto flex max-w-7xl flex-col items-start gap-6">
           <Reveal mode="mount">
-            <span className="inline-flex items-center gap-2 rounded-full border border-bone/20 bg-ink/40 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-bone-dim backdrop-blur-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-moss-soft shadow-[0_0_8px_2px_rgba(99,199,147,0.6)]" />
-              Open now &middot; Bubiashie, Accra
-            </span>
-          </Reveal>
-
-          <Reveal mode="mount" delay={0.08}>
             <h1 className="font-display max-w-3xl text-[2.6rem] leading-[1.04] font-bold tracking-tight text-bone sm:text-6xl md:text-7xl">
               Accra&rsquo;s home for <span className="text-gold">late nights</span>.
             </h1>
